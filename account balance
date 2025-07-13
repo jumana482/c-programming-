@@ -1,0 +1,28 @@
+#include <stdio.h>
+int main() 
+{
+    int balance, code, amount;
+    scanf("%d", &balance);
+    scanf("%d", &code);
+    scanf("%d", &amount);
+
+    if (code == 1) 
+    {
+        balance += amount;
+        printf("%d\n", balance);
+    } else if (code == 2) 
+    {
+        if (amount > balance)
+        {
+            printf("Insufficient Balance\n");
+        } else {
+            balance -= amount;
+            printf("%d\n", balance);
+        }
+    } else 
+    {
+        printf("Invalid Input\n");
+    }
+
+    return 0;
+}
